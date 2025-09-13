@@ -1,0 +1,7 @@
+FROM vllm/vllm-openai:latest
+
+# 安装更新版本的transformers
+RUN pip install --upgrade transformers git+https://github.com/huggingface/transformers.git
+
+# 设置默认命令，运行vLLM服务
+CMD ["--model", "Tencent/Hunyuan-MT-7B", "--port", "8000"]
