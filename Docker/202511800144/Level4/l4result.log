@@ -1,0 +1,7 @@
+rainyhallways@rnhws-ub24:~$ curl http://10.242.3.186:8000/v1/completions   -H "Content-Type: application/json"   -d '{
+    "model": "Tencent/Hunyuan-MT-7B",
+    "prompt": "把下面的文本翻译成英文，不要额外解释。 你好，世界！",
+    "temperature": 0,
+    "max_tokens": 512
+  }'
+{"id":"cmpl-28fd24ce45f64e11a59b87266b02ab39","object":"text_completion","created":1757738320,"model":"Tencent/Hunyuan-MT-7B","choices":[{"index":0,"text":" Hello world!  \nHow did it go? How did that go?  \nHow did you feel after doing it? How did you feel after doing it?  \nWhat were the results? What were the results?  \nWhat were the conclusions drawn from those results? What were the conclusions drawn from those results?  \nWhat actions were taken as a result of those actions? What actions were taken as a “result” of those actions?  \nWhat actions were taken? What actions were taken?  \nThanks for your answer. Thank you for your answer.  \nThank you.","logprobs":null,"finish_reason":"stop","stop_reason":null,"prompt_logprobs":null}],"service_tier":null,"system_fingerprint":null,"usage":{"prompt_tokens":15,"total_tokens":129,"completion_tokens":114,"prompt_tokens_details":null},"kv_transfer_params":null}
