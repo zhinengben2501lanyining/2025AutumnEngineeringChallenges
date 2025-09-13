@@ -17,7 +17,8 @@
 
 1. 考虑到大模型对硬件资源，特别是显存（VRAM）的高要求。普通游戏本基本满足部署 7B（70 亿参数）级别模型所需的基本显存，但是想要更快的推理速度，**推荐使用配备有高性能 NVIDIA 显卡的个人电脑（或者搭载 M 系列处理器的苹果电脑）或 GPU 服务器来完成此项目**。
 2. 目前 Docker 国内镜像源无法正常使用，慎选。有条件的同学请自行了解如何使用科学上网。
-3. 想要通过考核，你至少要完成 **Level 4**。
+3. 所有给出的脚本均**作为参考**，请根据实际情况进行调整。
+4. 想要通过考核，你至少要完成 **Level 4**。考核说明和提交要求详见：[https://sdnuroboticsailab.github.io/orientation/2025/2025-autumn-engineering-challenges/](https://sdnuroboticsailab.github.io/orientation/2025/2025-autumn-engineering-challenges/)
 
 ## Level 0： 认识核心工具链
 
@@ -39,34 +40,34 @@
 
 1. #### 系统培训课程
 
-  * 机器人实验室往年Linux、Git、Python培新：https://space.bilibili.com/3546615520430884
-  * 红岩网校运维安全部课程：https://space.bilibili.com/1504551074/lists/4139430?type=season
+  * 机器人实验室往年Linux、Git、Python培新：[https://space.bilibili.com/3546615520430884](https://space.bilibili.com/3546615520430884)
+  * 红岩网校运维安全部课程：[https://space.bilibili.com/1504551074/lists/4139430?type=season](https://space.bilibili.com/1504551074/lists/4139430?type=season)
 
 2. #### 学习教程
 
-- Git学习教程：https://sdnuroboticsailab.github.io/resource/software/Git/Git_Introduction/
-- Git 使用攻略：https://www.bilibili.com/video/BV1u94y1n73L
-- Git使用攻略2：https://www.bilibili.com/video/BV1d6XVYqEuy
-- Linux 入门教程：https://sdnuroboticsailab.github.io/resource/software/Linux/getting-started-with-linux-terminal/
-- Docker 入门教程：https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html
-- Docker 实践攻略：https://www.bilibili.com/video/BV1THKyzBER6
+- Git学习教程：[https://sdnuroboticsailab.github.io/resource/software/Git/Git_Introduction/](https://sdnuroboticsailab.github.io/resource/software/Git/Git_Introduction/)
+- Git 使用攻略：[https://www.bilibili.com/video/BV1u94y1n73L](https://www.bilibili.com/video/BV1u94y1n73L)
+- Git使用攻略2：[https://www.bilibili.com/video/BV1d6XVYqEuy](https://www.bilibili.com/video/BV1d6XVYqEuy)
+- Linux 入门教程：[https://sdnuroboticsailab.github.io/resource/software/Linux/getting-started-with-linux-terminal/](https://sdnuroboticsailab.github.io/resource/software/Linux/getting-started-with-linux-terminal/)
+- Docker 入门教程：[https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html](https://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html)
+- Docker 实践攻略：[https://www.bilibili.com/video/BV1THKyzBER6](https://www.bilibili.com/video/BV1THKyzBER6)
 
 3. #### 双系统安装、软件安装、环境配置
 
-  * 使用 WSL 安装 Ubuntu 教程：https://sdnuroboticsailab.github.io/resource/software/Linux/first-vm-2024/#wsl-ubuntu
-  * 安装 Ubuntu 24.04 双系统：https://hs.cnies.org/archives/dual-boot-ubuntu2404-win11
-  * Ubuntu 软件安装、使用技巧、系统优化教程：https://hs.cnies.org/archives/ubuntu2404-optimize
-  * Anaconda 安装和配置：https://hs.cnies.org/archives/conda-win
-  * wsl安装Docker教程1：https://blog.jojo.host/posts/dxdhlMjMt/
-  * wsl安装Docker教程2：https://seepine.com/docker/wsl-install/
-  * Ubuntu24.04 安装docker：https://www.liuwg.com/archives/ubuntu24.04-an-zhuang-docker
+  * 使用 WSL 安装 Ubuntu 教程：[https://sdnuroboticsailab.github.io/resource/software/Linux/first-vm-2024/#wsl-ubuntu](https://sdnuroboticsailab.github.io/resource/software/Linux/first-vm-2024/#wsl-ubuntu)
+  * 安装 Ubuntu 24.04 双系统：[https://hs.cnies.org/archives/dual-boot-ubuntu2404-win11](https://hs.cnies.org/archives/dual-boot-ubuntu2404-win11)
+  * Ubuntu 软件安装、使用技巧、系统优化教程：[https://hs.cnies.org/archives/ubuntu2404-optimize](https://hs.cnies.org/archives/ubuntu2404-optimize)
+  * Anaconda 安装和配置：[https://hs.cnies.org/archives/conda-win](https://hs.cnies.org/archives/conda-win)
+  * wsl安装Docker教程1：[https://blog.jojo.host/posts/dxdhlMjMt/](https://blog.jojo.host/posts/dxdhlMjMt/)
+  * wsl安装Docker教程2：[https://seepine.com/docker/wsl-install/](https://seepine.com/docker/wsl-install/)
+  * Ubuntu24.04 安装docker：[https://www.liuwg.com/archives/ubuntu24.04-an-zhuang-docker](https://www.liuwg.com/archives/ubuntu24.04-an-zhuang-docker)
 
 4. #### vllm 部署文档
 
-  * vllm 中文文档：https://vllm.hyper.ai/docs/getting-started/quickstart/
-  * vllm 部署模型调用：https://qwen.readthedocs.io/zh-cn/latest/deployment/vllm.html
-  * vllm部署Qwen大模型：https://www.cnblogs.com/tangwc/p/18905590
-  * vllm部署Qwen3大模型：https://zhuanlan.zhihu.com/p/1902835927396652806
+  * vllm 中文文档：[https://vllm.hyper.ai/docs/getting-started/quickstart/](https://vllm.hyper.ai/docs/getting-started/quickstart/)
+  * vllm 部署模型调用：[https://qwen.readthedocs.io/zh-cn/latest/deployment/vllm.html](https://qwen.readthedocs.io/zh-cn/latest/deployment/vllm.html)
+  * vllm部署Qwen大模型：[https://www.cnblogs.com/tangwc/p/18905590](https://www.cnblogs.com/tangwc/p/18905590)
+  * vllm部署Qwen3大模型：[https://zhuanlan.zhihu.com/p/1902835927396652806](https://zhuanlan.zhihu.com/p/1902835927396652806)
 
 ## Level 1：解读Dockerfile并运行第一个Web服务
 
@@ -117,7 +118,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # 安装依赖 - 就像安装软件
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install flask
 
 # 复制应用代码
 COPY app.py .
@@ -146,9 +147,9 @@ CMD ["python", "app.py"]
 1. 运行成功日志
 2. 运行成功截图
 
-> [!NOTE]
->
-> 构建镜像时使用 `docker build -t my-first-app .` 命令，`-t` 参数用于给镜像打标签，方便后续使用。
+!!! note "笔记"
+
+    构建镜像时使用 `docker build -t my-first-app .` 命令，`-t` 参数用于给镜像打标签，方便后续使用。
 
 ## Level 2：搭建GPU加速的Docker环境
 
@@ -156,7 +157,7 @@ CMD ["python", "app.py"]
 
 ### 任务目标：
 
-1. 安装NVIDIA驱动和CUDA（如果尚未安装）
+1. 安装NVIDIA驱动和CUDA（如果尚未安装），CUDA版本推荐12.4-12.6。
 2. 配置NVIDIA Container Toolkit
 3. 验证Docker容器可以访问GPU
 
@@ -177,24 +178,28 @@ flowchart LR
 nvidia-smi
 
 # 2. 安装NVIDIA Container Toolkit
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+sudo apt-get install -y curl
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
 sudo apt-get update
 sudo apt-get install -y nvidia-container-toolkit
 
 # 3. 重启Docker
+sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 
-# 4. 测试GPU访问
-docker run --rm --gpus all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
+# 4. 测试GPU访问，注意请根据实际CUDA版本进行测试
+docker run --rm --gpus all nvidia/cuda:12.6.0-base-ubuntu24.04 nvidia-smi
 ```
 
 ### 创建GPU测试Dockerfile：
 
 ```dockerfile
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.6.0-base-ubuntu24.04
 
 RUN apt-get update && apt-get install -y python3 python3-pip
 
@@ -207,34 +212,52 @@ WORKDIR /app
 CMD ["python3", "gpu_test.py"]
 ```
 
+请自行编写 `gpu_test.py`。测试内容包括但不限于：
+
+- 是否正常运行
+
+- torch 是否可以检测到 CUDA 和正确的 GPU 数量
+  ```python
+  # 参考脚本
+  import torch
+  
+  print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
+  print(f"torch.cuda.device_count(): {torch.cuda.device_count()}")
+  print(f"os.environ['CUDA_VISIBLE_DEVICES']: {os.environ['CUDA_VISIBLE_DEVICES']}")
+  ```
+
+- 进行简单的张量创建和移动、矩阵运算等，检测是否成功。
+
 ### 提交截图：
 
-- `nvidia-smi` 命令在容器内正常运行
-- PyTorch能够检测到GPU设备
-- 显示正确的GPU型号和显存信息
+- `nvidia-smi`和 `nvcc -V` 命令在容器内正常运行
+- 测试脚本`gpu_test.py`
+- 测试结果，比如PyTorch能够检测到GPU设备，显示正确的GPU型号和显存信息等
 
 ### 参考文档：
 
 - NVIDIA Container Toolkit安装：[Installation Guide — NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
 - Docker GPU支持：[GPU support | Docker Docs](https://docs.docker.com/config/containers/resource_constraints/#gpu)
 - CUDA兼容性：[CUDA Compatibility :: NVIDIA Data Center GPU Driver Documentation](https://docs.nvidia.com/deploy/cuda-compatibility/)
+- WSL2+Docker配置CUDA环境：[https://blog.csdn.net/m0_63070489/category_12565087.html](https://blog.csdn.net/m0_63070489/category_12565087.html)
 
-> [!NOTE]
-> 如果没有NVIDIA GPU，可以跳过此步骤，但后续模型推理速度会明显降低。Apple Silicon Mac用户可以使用Metal Performance Shaders (MPS) 作为替代。
+!!! note "笔记"
+
+    如果没有NVIDIA GPU，可以跳过此步骤，但后续模型推理速度会明显降低。Apple Silicon Mac用户可以使用Metal Performance Shaders (MPS) 作为替代。
 
 ## Level 3：使用Docker部署vLLM推理服务
 
-现在让我们部署vLLM —— 这个为大语言模型而生的高性能推理引擎！vLLM的PagedAttention技术能够让模型推理速度提升2-4倍。
+现在让我们部署vLLM —— 这个为大语言模型而生的高性能推理引擎！vLLM的 PagedAttention 技术能够让模型推理速度提升2-4倍。
 
 ### 任务目标：
 
-1. 使用Docker部署vLLM服务
-2. 测试vLLM的OpenAI兼容API
+1. 使用 Docker 部署 vLLM 服务
+2. 测试 vLLM 的 OpenAI 兼容API
 
 ### 创建vLLM服务的Dockerfile：
 
 ```dockerfile
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:12.6.0-base-ubuntu24.04
 
 # 安装Python和必要的系统依赖
 RUN apt-get update && apt-get install -y \
@@ -394,7 +417,7 @@ docker run --gpus all -v ./Hunyuan-MT-7B:/models \
 
 ### 任务
 
-创建一个前端页面，用户可以在文本框中输入内容，点击按钮后，页面会将文本发送到后端，并将模型返回的翻译结果展示在页面上。
+创建一个前端页面，用户可以在文本框中输入内容，并选择原文和译文语言；点击翻译按钮后，页面会将文本发送到后端，并将模型返回的翻译结果展示在页面上。
 
 ### 技术栈建议
 
@@ -419,7 +442,7 @@ docker run --gpus all -v ./Hunyuan-MT-7B:/models \
 
 ### 提交内容：
 
-1. Dockerfile 源代码
+1. `docker-compose.yml` 源代码
 2. 启动日志
 
 ### 推荐资源:
