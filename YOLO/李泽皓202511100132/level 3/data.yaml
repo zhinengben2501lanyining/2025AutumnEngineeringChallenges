@@ -1,0 +1,9 @@
+path: C:\Users\99597\xiangmuone\CCPD
+
+train: images\train
+val: images\val
+test: images\test
+
+nc: 1
+
+names: ['license_plate']                                                                                                                                                                                                                                                                                                                                               
