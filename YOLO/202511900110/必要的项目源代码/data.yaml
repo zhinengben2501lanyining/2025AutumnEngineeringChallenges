@@ -1,0 +1,8 @@
+# 1. 数据集路径（绝对路径/相对路径均可，推荐绝对路径避免错误）
+train: D:/yolo model new 2/yolo/datasets/CCPD/images/train  # 训练集图片路径
+val: D:/yolo model new 2/yolo/datasets/CCPD/images/val      # 验证集图片路径
+#test: C:/Users/30735/Desktop/datasets/CCPD_YOLO/images/test    # 测试集图片路径（可选，评估用）
+
+# 2. 类别信息（车牌检测为单类，固定配置）
+nc: 1  # number of classes（类别数：1个，仅车牌）
+names: ["license_plate"]  # 类别名称（与标注文件的class_id=0对应）
